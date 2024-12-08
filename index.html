@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOMORA</title>
+    <link rel="stylesheet" href="./src/output.css" />
+    <link rel="stylesheet" href="./src/bg.css" />
+    <link rel="icon" href="./icons/logo.png" type="image/png" />
+  </head>
+  <body>
+    <!-- This is for the navigation of the Website/System -->
+    <nav class="bg-[#800000] py-3 flex items-center gap-7 px-10">
+      <input type="checkbox" id="toggle" hidden />
+
+      <!-- This is for the logo img and logo name -->
+      <div class="">
+        <a href="./index.html"
+          ><img src="./icons/logo.png" alt="Logo Image" width="70"
+        /></a>
+      </div>
+
+      <div
+        class="flex items-center justify-between w-full gap-5 px-8 py-3 bg-white lg:px-20 rounded-2xl"
+      >
+        <div class="items-center hidden gap-10 lg:flex navBar">
+          <a
+            href=""
+            class="flex items-center gap-2 font-bold hover:text-red-900"
+            ><img src="./icons/home.png" alt="" />HOME</a
+          >
+          <a
+            href="./maps.html"
+            class="flex items-center gap-2 font-bold hover:text-red-900"
+          >
+            <img src="./icons/maps.png" alt="" />
+            MAPS</a
+          >
+          <a
+            href="./findApartment.html"
+            class="flex items-center gap-2 font-bold hover:text-red-900"
+          >
+            <img src="./icons/locate.png" alt="" />
+            FIND YOUR APARTMENT</a
+          >
+        </div>
+
+        <div class="hidden lg:flex">
+          <a
+            href="#footer"
+            class="flex items-center gap-2 font-bold hover:text-red-900"
+            ><img src="./icons/contact-us.png" alt="" />CONTACT US</a
+          >
+        </div>
+        <div class="ml-auto lg:hidden">
+          <label for="toggle"><img src="./icons/menu.png" alt="" /></label>
+        </div>
+      </div>
+      <label
+        for="toggle"
+        class="fixed bottom-0 right-0 hidden w-full h-full screenWhite"
+      ></label>
+      <ul
+        class="fixed top-0 bottom-0 left-[-100%] flex flex-col justify-around p-7 transition-all bg-white border-r-2 border-black"
+        id="navBar"
+      >
+        <a href="./index.html" class="font-bold">HOME</a>
+        <a href="./maps.html" class="font-bold">MAPS</a>
+        <a href="./findApartment.html" class="font-bold">FIND YOUR APARTMENT</a>
+        <a href="./graph.html" class="font-bold">GRAPH</a>
+      </ul>
+    </nav>
+
+    <!-- This is for the main content such as Title, Subtitle/Subheading and contents -->
+    <!-- bg-no-repeat bg-cover -->
+    <main class="h-screen px-10 pt-10" id="mainBg">
+      <div class="flex flex-col gap-5 mx-auto">
+        <div class="flex flex-col items-center justify-center gap-3 px-10">
+          <img src="./icons/domoraLogo.png" alt="" class="w-[90px]" />
+          <h1
+            class="text-xl font-black text-red-900 border-r-4 border-red-900 lg:text-6xl user-name"
+          ></h1>
+        </div>
+
+        <div class="mx-auto max-w-[900px] flex flex-col lg:gap-24 gap-16">
+          <div class="flex flex-col gap-5 p-6 bg-white lg:p-16 rounded-2xl">
+            <p class="text-xs text-center md:text-base lg:text-lg">
+              We help you discover apartments tailored to your unique
+              preferences. Whether it's proximity to your university, nearby
+              stores, or your favorite eatery, we make sure to find the perfect
+              match. Our goal is to ensure that your living space fits your
+              lifestyle. You deserve a place that makes you feel at home, and
+              we're here to help you find it. Start your search today and take
+              the first step toward finding your ideal apartment.
+            </p>
+
+            <p class="italic font-bold text-center text-black">
+              "Find Your Perfect Apartment to Live Your Lifestyle"
+            </p>
+          </div>
+          <div class="text-center">
+            <a
+              href="./maps.html"
+              class="px-16 py-6 text-sm font-black text-white bg-red-900 lg:text-xl lg:py-10 rounded-2xl"
+              >GO TO MAP
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer
+      id="footer"
+      class="flex flex-col justify-center gap-16 py-5 mt-10 md:flex-row"
+    >
+      <!-- First Side -->
+      <div
+        class="flex flex-col gap-4 w-full md:max-w-[600px] items-center md:items-start"
+      >
+        <a href=""><h1 class="text-3xl italic font-black">DOMORA</h1></a>
+        <p class="text-center md:text-start">
+          This System is designed to help users find the best apartments based
+          on their preferences for proximity to key amenities such as schools,
+          eateries, laundromats, and stores. It uses Dijkstra's Algorithm to
+          calculate the shortest distances between apartments and amenities from
+          a predefined graph. The system is built using HTML, CSS (TailwindCSS),
+          and JavaScript for the front end and logic, with a focus on user
+          interactivity and simplicity. This project is currently a prototype
+          and serves as a proof of concept. It requires further development for
+          scalability, real-time data integration (e.g., Google Maps API), and a
+          more user-friendly interface to meet practical use-case standards.
+        </p>
+        <div class="flex gap-6">
+          <a href="" class="transition-all hover:scale-110"
+            ><img
+              class="w-[30px]"
+              src="./icons/facebook-round-svgrepo-com.svg"
+              alt=""
+          /></a>
+          <a href="" class="transition-all hover:scale-110"
+            ><img
+              class="w-[30px]"
+              src="./icons/instagram-f-svgrepo-com.svg"
+              alt=""
+          /></a>
+          <a href="" class="transition-all hover:scale-110"
+            ><img
+              class="w-[30px]"
+              src="./icons/linkedin-round-svgrepo-com.svg"
+              alt=""
+          /></a>
+          <a href="" class="transition-all hover:scale-110"
+            ><img
+              class="w-[30px]"
+              src="./icons/twitter-round-svgrepo-com.svg"
+              alt=""
+          /></a>
+        </div>
+      </div>
+
+      <!-- Second Side -->
+      <div class="flex flex-col items-center gap-5 md:items-start">
+        <h1 class="font-bold">Pages</h1>
+        <div class="flex flex-col gap-2 text-center md:text-start">
+          <a href="./index.html" class="hover:font-bold">Home</a>
+          <a href="./maps.html" class="hover:font-bold">Maps</a>
+          <a href="./findApartment.html" class="hover:font-bold"
+            >Find Your Apartment</a
+          >
+        </div>
+      </div>
+
+      <!-- Third Side -->
+      <div class="flex flex-col items-center gap-5 md:items-start">
+        <h1 class="font-bold">Resources</h1>
+        <div class="flex flex-col gap-2 text-center md:text-start">
+          <a
+            href="https://www.google.com/maps"
+            target="_blank"
+            class="hover:font-bold"
+            >Google Maps</a
+          >
+          <a
+            href="https://developers.google.com/maps"
+            target="_blank"
+            class="hover:font-bold"
+            >API</a
+          >
+          <a
+            href="https://www.youtube.com/watch?v=6Tl3ROOgvgw"
+            target="_blank"
+            class="hover:font-bold"
+            >Tutorial</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <script src="./jsFiles/navigation.js"></script>
+    <script src="./jsFiles/index.js"></script>
+  </body>
+</html>

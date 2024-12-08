@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MAPS</title>
+    <link rel="stylesheet" href="./src/output.css" />
+    <link rel="icon" href="./icons/logo.png" type="image/png" />
+  </head>
+  <body>
+    <nav class="bg-[#800000] py-3 flex items-center gap-7 px-10">
+      <input type="checkbox" id="toggle" hidden />
+
+      <!-- This is for the logo img and logo name -->
+      <div class="">
+        <a href="./index.html"
+          ><img src="./icons/logo.png" alt="Logo Image" width="70"
+        /></a>
+      </div>
+
+      <div
+        class="flex items-center justify-between w-full gap-5 px-8 py-3 bg-white lg:px-20 rounded-2xl"
+      >
+        <div class="items-center hidden gap-10 lg:flex navBar">
+          <a
+            href="./index.html"
+            class="flex items-center gap-2 font-bold hover:text-red-900"
+            ><img src="./icons/home.png" alt="" />HOME</a
+          >
+          <a
+            href="./maps.html"
+            class="flex items-center gap-2 font-bold hover:text-red-900"
+          >
+            <img src="./icons/maps.png" alt="" />
+            MAPS</a
+          >
+          <a
+            href="./findApartment.html"
+            class="flex items-center gap-2 font-bold hover:text-red-900"
+          >
+            <img src="./icons/locate.png" alt="" />
+            FIND YOUR APARTMENT</a
+          >
+        </div>
+
+        <div class="ml-auto lg:hidden">
+          <label for="toggle"><img src="./icons/menu.png" alt="" /></label>
+        </div>
+      </div>
+
+      <label
+        for="toggle"
+        class="fixed bottom-0 right-0 hidden w-full h-full screenWhite"
+      ></label>
+      <ul
+        class="fixed top-0 bottom-0 left-[-100%] flex flex-col justify-around p-7 transition-all bg-white border-r-2 border-black z-50"
+        id="navBar"
+      >
+        <a href="./index.html" class="font-bold">HOME</a>
+        <a href="./maps.html" class="font-bold">MAPS</a>
+        <a href="./findApartment.html" class="font-bold">FIND YOUR APARTMENT</a>
+        <a href="./graph.html" class="font-bold">GRAPH</a>
+      </ul>
+    </nav>
+
+    <div
+      id="google-map"
+      class="border-2 border-black w-[300px] h-[500px] md:w-[600px] md:h-[400px] lg:w-[1000px] lg:h-[800px] self-center mx-auto mt-4 z-0"
+    ></div>
+
+    <div class="mb-8">
+      <h1 class="my-5 text-3xl font-extrabold text-center">DESCRIPTION</h1>
+      <p class="max-w-[1500px] mx-auto text-center text-xl px-10">
+        This system is designed to create an interactive Google Maps application
+        that visually represents various essential locations in a real-life area
+        scenario (Location: Site Lucena City), such as schools, eateries,
+        laundry shops, stores, and apartments. Its purpose is to help users,
+        particularly students or residents, easily find and explore nearby
+        amenities based on their geographical locations. The map integrates
+        markers for each location category, represented by distinct icons,
+        allowing users to click on markers to view detailed information such as
+        the name and address of the location. <br /><br />
+        <span class="font-bold"
+          >The images used in this system are custom markers that visually
+          distinguish each category of locations:</span
+        ><br />
+        <span>
+          <ol class="flex flex-col items-center gap-6">
+            <li class="flex items-center gap-2">
+              School Marker <img src="./amenitiesIcons/school.png" alt="" />for
+              educational institutions.
+            </li>
+            <li class="flex items-center gap-2">
+              Eatery Marker
+              <img src="./amenitiesIcons/restaurant.png" alt="" />for dining
+              places.
+            </li>
+
+            <li class="flex items-center gap-2">
+              Laundry Marker
+              <img src="./amenitiesIcons/laundry.png" alt="" />for laundry
+              services.
+            </li>
+            <li class="flex items-center gap-2">
+              Store Marker
+              <img src="./amenitiesIcons/store.png" alt="" />for convenience and
+              retail stores.
+            </li>
+            <li class="flex items-center gap-2">
+              Apartment Marker
+              <img src="./amenitiesIcons/apartment.png" alt="" />for residential
+              apartments.
+            </li>
+          </ol>
+        </span>
+      </p>
+    </div>
+
+    <script src="./jsFiles/navigation.js"></script>
+
+    <script
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFCxzc5I7LpNuF-YvBgQyq-wdWsL2mzu0&callback=initMap"
+    ></script>
+    <script src="./jsFiles/maps.js"></script>
+  </body>
+</html>

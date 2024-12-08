@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find Your Apartment</title>
+    <link rel="stylesheet" href="./src/output.css" />
+    <link rel="stylesheet" href="./src/inputRange.css" />
+    <link rel="icon" href="./icons/logo.png" type="image/png" />
+  </head>
+  <body>
+    <nav class="bg-[#800000] py-3 flex items-center gap-7 px-10">
+      <input type="checkbox" id="toggle" hidden />
+
+      <!-- This is for the logo img and logo name -->
+      <div class="">
+        <a href="./index.html"
+          ><img src="./icons/logo.png" alt="Logo Image" width="70"
+        /></a>
+      </div>
+
+      <div
+        class="flex items-center justify-between w-full gap-5 px-8 py-3 bg-white lg:px-20 rounded-2xl"
+      >
+        <div class="items-center hidden gap-10 lg:flex navBar">
+          <a
+            href="./index.html"
+            class="flex items-center gap-2 font-bold hover:text-red-900"
+            ><img src="./icons/home.png" alt="" />HOME</a
+          >
+          <a
+            href="./maps.html"
+            class="flex items-center gap-2 font-bold hover:text-red-900"
+          >
+            <img src="./icons/maps.png" alt="" />
+            MAPS</a
+          >
+          <a
+            href="./findApartment.html"
+            class="flex items-center gap-2 font-bold hover:text-red-900"
+          >
+            <img src="./icons/locate.png" alt="" />
+            FIND YOUR APARTMENT</a
+          >
+          <a
+            class="flex items-center gap-2 font-bold hover:text-red-900"
+            href="./graph.html"
+            ><img src="./icons/logistics.png" alt="" />GRAPH</a
+          >
+        </div>
+
+        <div class="ml-auto lg:hidden">
+          <label for="toggle"><img src="./icons/menu.png" alt="" /></label>
+        </div>
+      </div>
+
+      <label
+        for="toggle"
+        class="fixed bottom-0 right-0 hidden w-full h-full screenWhite"
+      ></label>
+      <ul
+        class="fixed top-0 bottom-0 left-[-100%] flex flex-col justify-around p-7 transition-all bg-white border-r-2 border-black"
+        id="navBar"
+      >
+        <a href="./index.html" class="font-bold">HOME</a>
+        <a href="./maps.html" class="font-bold">MAPS</a>
+        <a href="./findApartment.html" class="font-bold">FIND YOUR APARTMENT</a>
+        <a href="./graph.html" class="font-bold">GRAPH</a>
+      </ul>
+    </nav>
+
+    <main class="px-10">
+      <h1 class="mt-10 text-[2rem] md:text-[3.5rem] font-bold text-center">
+        FIND YOUR APARTMENT!
+      </h1>
+      <p class="text-center text-[1.5rem]">
+        Discover the best apartments based on your preferences for amenities!
+      </p>
+      <p
+        class="mx-auto mt-10 md:text-[1.5rem] max-w-[1000px] text-justify text-[1rem]"
+      >
+        In this system, the higher the value you set for each category (School,
+        Eatery, Laundry, and Store), the more important that category becomes in
+        determining the best apartment. For example, if you give a higher value
+        to "School," the system will prioritize apartments that are closer to
+        schools. Similarly, if you assign a higher weight to "Eatery,"
+        apartments near eateries will have a greater influence on the ranking.
+        The higher the value for each category, the more it contributes to the
+        overall score, making it a key factor in determining the best apartments
+        that match your preferences.
+      </p>
+      <div class="flex flex-col gap-10">
+        <!-- School -->
+        <div
+          class="flex flex-col items-center justify-center gap-5 md:flex-row"
+        >
+          <img
+            src="./amenitiesIcons/school.png"
+            alt="School Image"
+            class="md:h-[90px] h-[60px]"
+          />
+          <div class="PB-range-slider-div">
+            <input
+              type="range"
+              min="0"
+              max="100"
+              value="50"
+              class="PB-range-slider"
+              id="school"
+            />
+            <p class="PB-range-slidervalue" id="sliderValue">50</p>
+          </div>
+        </div>
+
+        <!-- Laundry -->
+        <div
+          class="flex flex-col items-center justify-center gap-5 md:flex-row"
+        >
+          <img
+            src="./amenitiesIcons/laundry.png"
+            alt="Laundry Image"
+            class="md:h-[90px] h-[60px]"
+          />
+          <div class="PB-range-slider-div">
+            <input
+              type="range"
+              min="0"
+              max="100"
+              value="50"
+              class="PB-range-slider"
+              id="laundry"
+            />
+            <p class="PB-range-slidervalue" id="sliderValue2">50</p>
+          </div>
+        </div>
+
+        <!-- Eatery -->
+        <div
+          class="flex flex-col items-center justify-center gap-5 md:flex-row"
+        >
+          <img
+            src="./amenitiesIcons/restaurant.png"
+            alt="Parking Image"
+            class="md:h-[90px] h-[60px]"
+          />
+          <div class="PB-range-slider-div">
+            <input
+              type="range"
+              min="0"
+              max="100"
+              value="50"
+              class="PB-range-slider"
+              id="eatery"
+            />
+            <p class="PB-range-slidervalue" id="sliderValue3">50</p>
+          </div>
+        </div>
+
+        <!-- Store -->
+        <div
+          class="flex flex-col items-center justify-center gap-5 md:flex-row"
+        >
+          <img
+            src="./amenitiesIcons/store.png"
+            alt="Parking Image"
+            class="md:h-[90px] h-[60px]"
+          />
+          <div class="PB-range-slider-div">
+            <input
+              type="range"
+              min="0"
+              max="100"
+              value="50"
+              class="PB-range-slider"
+              id="store"
+            />
+            <p class="PB-range-slidervalue" id="sliderValue4">50</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex justify-center my-10" id="findBestApartment">
+        <button
+          class="px-8 py-4 font-bold text-white transition-all bg-red-900 hover:bg-black hover:text-red-900"
+        >
+          FIND BEST APARTMENTS
+        </button>
+      </div>
+
+      <hr class="my-4 border-t-2 border-black border-dashed" />
+
+      <p class="my-5 text-lg font-bold text-center">
+        The Results Will Appear Below.
+      </p>
+
+      <div id="results" class="my-5 text-center"></div>
+    </main>
+
+    <script src="./jsFiles/navigation.js"></script>
+    <script src="./jsFiles/inputRange.js"></script>
+    <script src="./jsFiles/results.js"></script>
+  </body>
+</html>

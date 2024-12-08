@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Graph</title>
+    <link rel="stylesheet" href="./src/output.css" />
+    <link rel="icon" href="./icons/logo.png" type="image/png" />
+  </head>
+  <body>
+    <nav class="bg-[#800000] py-3 flex items-center gap-7 px-10">
+      <input type="checkbox" id="toggle" hidden />
+
+      <!-- This is for the logo img and logo name -->
+      <div class="">
+        <a href="./index.html"
+          ><img src="./icons/logo.png" alt="Logo Image" width="70"
+        /></a>
+      </div>
+
+      <div
+        class="flex items-center justify-between w-full gap-5 px-8 py-3 bg-white lg:px-20 rounded-2xl"
+      >
+        <div class="items-center hidden gap-10 lg:flex navBar">
+          <a
+            href="./index.html"
+            class="flex items-center gap-2 font-bold hover:text-red-900"
+            ><img src="./icons/home.png" alt="" />HOME</a
+          >
+          <a
+            href="./maps.html"
+            class="flex items-center gap-2 font-bold hover:text-red-900"
+          >
+            <img src="./icons/maps.png" alt="" />
+            MAPS</a
+          >
+          <a
+            href="./findApartment.html"
+            class="flex items-center gap-2 font-bold hover:text-red-900"
+          >
+            <img src="./icons/locate.png" alt="" />
+            FIND YOUR APARTMENT</a
+          >
+          <a
+            class="flex items-center gap-2 font-bold hover:text-red-900"
+            href="./graph.html"
+            ><img src="./icons/logistics.png" alt="" />GRAPH</a
+          >
+        </div>
+
+        <div class="ml-auto lg:hidden">
+          <label for="toggle"><img src="./icons/menu.png" alt="" /></label>
+        </div>
+      </div>
+
+      <label
+        for="toggle"
+        class="fixed bottom-0 right-0 hidden w-full h-full screenWhite"
+      ></label>
+      <ul
+        class="fixed top-0 bottom-0 left-[-100%] flex flex-col justify-around p-7 transition-all bg-white border-r-2 border-black"
+        id="navBar"
+      >
+        <a href="./index.html" class="font-bold">HOME</a>
+        <a href="./maps.html" class="font-bold">MAPS</a>
+        <a href="./findApartment.html" class="font-bold">FIND YOUR APARTMENT</a>
+        <a href="./graph.html" class="font-bold">GRAPH</a>
+      </ul>
+    </nav>
+
+    <main>
+      <h1 class="my-10 text-3xl font-bold text-center">Graph</h1>
+      <img src="./icons/graph.jpg" alt="" />
+    </main>
+
+    <script src="./jsFiles/navigation.js"></script>
+  </body>
+</html>
